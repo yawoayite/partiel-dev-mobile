@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText nomEditText,pseudoEditext;
-    Button btEnregistrer;
+    private EditText nomEditText,pseudoEditext;
+    private Button btEnregistrer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,10 +72,10 @@ public class RegisterActivity extends AppCompatActivity {
         String nomText = (nomEditText.getText()).toString();
         String pseudoText = (pseudoEditext.getText()).toString();
 
-        if(nomText == null){
-            Toast.makeText(getApplicationContext(),"Le champ nom est vide",Toast.LENGTH_LONG).show();
-        }else if (pseudoText == null){
-            Toast.makeText(getApplicationContext(),"Le champ pseudo est vide",Toast.LENGTH_LONG).show();
+        if(nomText.length() == 0){
+            Toast.makeText(this,"Le champ nom est vide",Toast.LENGTH_SHORT).show();
+        }else if (pseudoText.length() == 0){
+            Toast.makeText(this,"Le champ pseudo est vide",Toast.LENGTH_SHORT).show();
         }else {
             saveNomPreferences(nomEditText);
             savePseudoPreferences(pseudoEditext);
