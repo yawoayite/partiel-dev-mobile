@@ -29,15 +29,12 @@ public class GameActivity extends AppCompatActivity {
         initButtons();
 
         listeInitializer(maListe);
-
-        System.out.println(score);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         initOnClick();
-
     }
 
     public void initButtons(){
