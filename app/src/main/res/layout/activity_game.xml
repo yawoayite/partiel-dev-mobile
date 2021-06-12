@@ -125,14 +125,23 @@
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="278dp">
-            <Button
-                android:id="@+id/buttonDix"
+
+            <TextView
+                android:id="@+id/TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginLeft="30dp"
-                android:text="Button"
+                android:text="Score"
                 tools:layout_editor_absoluteX="284dp"
                 tools:layout_editor_absoluteY="290dp" />
+            <EditText
+                android:id="@+id/scoreEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="9dp"
+                android:inputType="number"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
         </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 

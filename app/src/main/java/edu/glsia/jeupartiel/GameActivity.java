@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -19,7 +20,8 @@ public class GameActivity extends AppCompatActivity {
     private String ancienneValeur;
     private int score = 0;
 
-    private Button buttonUn,buttonDeux,buttonTrois,buttonQuatre,buttonCinq,buttonSix,buttonSept,buttonHuit,buttonNeuf,buttonDix;
+    private Button buttonUn,buttonDeux,buttonTrois,buttonQuatre,buttonCinq,buttonSix,buttonSept,buttonHuit,buttonNeuf;
+    private EditText scoreEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class GameActivity extends AppCompatActivity {
         buttonSept = findViewById(R.id.buttonSept);
         buttonHuit = findViewById(R.id.buttonHuit);
         buttonNeuf = findViewById(R.id.buttonNeuf);
-        buttonDix = findViewById(R.id.buttonDix);
+        scoreEditText = findViewById(R.id.scoreEditText);
     }
 
     public void initOnClick(){
@@ -91,7 +93,7 @@ public class GameActivity extends AppCompatActivity {
         if(ancienneValeur == button.getText().toString())
             score+=1;
         ancienneValeur= button.getText().toString();
-        buttonDix.setText(String.valueOf(score));
+        scoreEditText.setText(String.valueOf(score));
     }
 
 }
