@@ -24,7 +24,7 @@
             <Button
                 android:id="@+id/buttonUn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="61dp"
                 android:layout_marginLeft="10dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -33,7 +33,7 @@
             <Button
                 android:id="@+id/buttonDeux"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="59dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="20dp"
                 android:text="Button"
@@ -43,7 +43,7 @@
             <Button
                 android:id="@+id/buttonTrois"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="59dp"
                 android:layout_marginLeft="30dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -59,7 +59,7 @@
             <Button
                 android:id="@+id/buttonQuatre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
                 android:layout_marginLeft="10dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -68,7 +68,7 @@
             <Button
                 android:id="@+id/buttonCinq"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="20dp"
                 android:text="Button"
@@ -78,7 +78,7 @@
             <Button
                 android:id="@+id/buttonSix"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_marginLeft="30dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -94,7 +94,7 @@
             <Button
                 android:id="@+id/buttonSept"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -103,7 +103,7 @@
             <Button
                 android:id="@+id/buttonHuit"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="73dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="20dp"
                 android:text="Button"
@@ -113,7 +113,7 @@
             <Button
                 android:id="@+id/buttonNeuf"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
                 android:layout_marginLeft="30dp"
                 android:text="Button"
                 tools:layout_editor_absoluteX="284dp"
@@ -134,13 +134,14 @@
                 android:text="Score"
                 tools:layout_editor_absoluteX="284dp"
                 tools:layout_editor_absoluteY="290dp" />
+
             <EditText
                 android:id="@+id/scoreEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="9dp"
-                android:inputType="number"
                 android:importantForAutofill="no"
+                android:inputType="number"
                 tools:ignore="LabelFor" />
         </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>

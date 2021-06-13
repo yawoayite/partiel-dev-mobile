@@ -56,14 +56,16 @@ public class RegisterActivity extends AppCompatActivity {
     public void applyPreferences(){
         SharedPreferences pseudoSharedPreferences = getPreferences(Context.MODE_PRIVATE);
         String lcp = pseudoSharedPreferences.getString("pseudo","floflo");
-        if(!lcp.equals("floflo")){
-            pseudoEditext.setText(String.valueOf(lcp));
-        }
-
         SharedPreferences nomSharedPref = getPreferences(Context.MODE_PRIVATE);
         String lecompteur =  nomSharedPref.getString("nom","flo");
-        if(!lecompteur.equals("flo")){
+
+        if(!lcp.equals("floflo") && !lecompteur.equals("flo")){
+            pseudoEditext.setText(String.valueOf(lcp));
             nomEditText.setText(String.valueOf(lecompteur));
+
+            nomEditText.setEnabled(false);
+            pseudoEditext.setEnabled(false);
+            btEnregistrer.setEnabled(false);
         }
 
     }
@@ -72,10 +74,13 @@ public class RegisterActivity extends AppCompatActivity {
         String nomText = (nomEditText.getText()).toString();
         String pseudoText = (pseudoEditext.getText()).toString();
 
-        if(nomText.length() == 0){
-            Toast.makeText(this,"Le champ nom est vide",Toast.LENGTH_SHORT).show();
-        }else if (pseudoText.length() == 0){
-            Toast.makeText(this,"Le champ pseudo est vide",Toast.LENGTH_SHORT).show();
+
+        if(nomText.equals("") && pseudoText.equals("")){
+            Toast.makeText(this,"Veuillez remplir les champs",Toast.LENGTH_LONG).show();
+        } else if(nomText.equals("")){
+            Toast.makeText(this,"Le champ nom est vide",Toast.LENGTH_LONG).show();
+        }else if (pseudoText.equals("")){
+            Toast.makeText(this,"Le champ pseudo est vide",Toast.LENGTH_LONG).show();
         }else {
             saveNomPreferences(nomEditText);
             savePseudoPreferences(pseudoEditext);
