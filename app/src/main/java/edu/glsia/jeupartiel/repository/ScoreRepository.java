@@ -33,7 +33,6 @@ public class ScoreRepository {
         return maListe;
     }
 
-
     public void save(SQLiteDatabase database) {
     }
 }

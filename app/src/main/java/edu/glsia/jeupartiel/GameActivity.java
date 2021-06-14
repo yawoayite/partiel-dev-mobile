@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
+import edu.glsia.jeupartiel.database.DBHelper;
 import edu.glsia.jeupartiel.model.Score;
 import edu.glsia.jeupartiel.repository.ScoreRepository;
 
@@ -23,8 +25,9 @@ public class GameActivity extends AppCompatActivity {
     private String Z = "z";
     private String ancienneValeur;
     private int score = 0;
-    private int compteur = 0;
-    DbHelper dbHelper;
+    private int compteur ;
+
+    private DBHelper dbHelper;
 
     private Button buttonUn,buttonDeux,buttonTrois,buttonQuatre,buttonCinq,buttonSix,buttonSept,buttonHuit,buttonNeuf;
     private EditText scoreEditText;
@@ -33,6 +36,9 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        compteur = 0 ;
+        dbHelper = new DBHelper(this);
 
         initButtons();
 
@@ -76,16 +82,7 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setButtonText(button,maListe);
                 compteur++;
-                if(compteur == 9){
-                    Score scoreObj = new Score();
-                    scoreObj.setDate();
-                    scoreObj.setScore(String.valueOf(score));
-                    ScoreRepository scoreRepository = new ScoreRepository();
-                    scoreRepository.save(dbHelper.getDatabase(), scoreObj);
-                    scoreRepository.save(dbHelper.getDatabase());
-                    //Toast.makeText(this,"Votre score est "+score,Toast.LENGTH_LONG).show();
-                    finish();
-                }
+                saveScore(compteur);
             }
         });
     }
@@ -111,6 +108,18 @@ public class GameActivity extends AppCompatActivity {
             score+=1;
         ancienneValeur= button.getText().toString();
         scoreEditText.setText(String.valueOf(score));
+    }
+
+    public void saveScore(int value){
+        if(value == 9){
+            Score scoreObject = new Score();
+            scoreObject.setScore(String.valueOf(score));
+            scoreObject.setDate();
+
+            ScoreRepository scoreRepository = new ScoreRepository();
+            scoreRepository.save(dbHelper.getDatabase(),scoreObject);
+
+        }
     }
 
 }

@@ -1,5 +1,4 @@
-package edu.glsia.jeupartiel;
-
+package edu.glsia.jeupartiel.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,8 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DbHelper extends SQLiteOpenHelper {
-
+public class DBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase database;
 
     private final String SCORE_CREATE = "CREATE TABLE score(" +
@@ -16,8 +14,9 @@ public class DbHelper extends SQLiteOpenHelper {
             "score INT," +
             "date VARCHAR(40)" +
             ");";
-    public DbHelper(@Nullable Context context) {
-        super(context, "scoreDB", null, 1);
+
+    public DBHelper(@Nullable Context context) {
+        super(context, "score_db", null, 1);
     }
 
     @Override
