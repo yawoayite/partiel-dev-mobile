@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.glsia.jeupartiel">
+    package="edu.glsia.clickme">
 
     <application
         android:allowBackup="true"
@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JeuPartiel">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".ScoreActivity" />
-        <activity android:name=".ScoreItem"></activity>
+        <activity android:name="edu.glsia.clickme.RegisterActivity"></activity>
+        <activity android:name="edu.glsia.clickme.GameActivity" />
+        <activity android:name="edu.glsia.clickme.ScoreActivity" />
+        <activity android:name="edu.glsia.clickme.ScoreItem"></activity>
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/actions" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="edu.glsia.clickme.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

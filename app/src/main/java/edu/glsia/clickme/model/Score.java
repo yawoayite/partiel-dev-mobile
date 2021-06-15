@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel.model;
+package edu.glsia.clickme.model;
 
 import android.annotation.SuppressLint;
 

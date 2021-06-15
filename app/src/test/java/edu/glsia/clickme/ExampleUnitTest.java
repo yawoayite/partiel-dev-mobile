@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel;
+package edu.glsia.clickme;
 
 import org.junit.Test;
 

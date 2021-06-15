@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel.database;
+package edu.glsia.clickme.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

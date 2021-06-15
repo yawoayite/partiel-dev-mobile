@@ -5,8 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScoreActivity">
-    <ListView
-        android:id="@+id/scoreListView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/buttonRechercher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rechercher"
+                android:layout_marginRight="30dp"></Button>
+
+            <EditText
+                android:id="@+id/rechercherEditText"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"></EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            tools:ignore="MissingConstraints"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/scoreListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel.repository;
+package edu.glsia.clickme.repository;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -8,7 +8,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.glsia.jeupartiel.model.Score;
+import edu.glsia.clickme.model.Score;
 
 public class ScoreRepository {
     public boolean save(SQLiteDatabase database, Score score) {

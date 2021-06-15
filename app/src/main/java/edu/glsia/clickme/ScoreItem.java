@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel;
+package edu.glsia.clickme;
 
 import android.app.Activity;
 import android.os.Bundle;

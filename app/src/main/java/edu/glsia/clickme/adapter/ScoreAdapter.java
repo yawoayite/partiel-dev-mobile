@@ -1,17 +1,17 @@
-package edu.glsia.jeupartiel.adapter;
+package edu.glsia.clickme.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
-import edu.glsia.jeupartiel.R;
-import edu.glsia.jeupartiel.ScoreActivity;
-import edu.glsia.jeupartiel.model.Score;
+import edu.glsia.clickme.R;
+import edu.glsia.clickme.model.Score;
 
 public class ScoreAdapter  extends BaseAdapter {
 
@@ -53,12 +53,23 @@ public class ScoreAdapter  extends BaseAdapter {
             scoreHolder = (ScoreHolder) convertView.getTag();
         }
 
+        ImageView imageView;
+        imageView = (ImageView) convertView.findViewById(R.id.imageScore);
+
         scoreHolder.date = convertView.findViewById(R.id.textdate);
         scoreHolder.score = convertView.findViewById(R.id.textscore);
 
         scoreHolder.score.setText(((Score)getItem(position)).getScore());
         scoreHolder.date.setText(((Score)getItem(position)).getDate());
 
+        Score score = scoreList.get(position);
+        int x  = Integer.valueOf(score.getScore());
+        if (x>=4){
+            imageView.setImageResource(R.mipmap.souriant);
+
+        }else{
+            imageView.setImageResource(R.mipmap.triste);
+        }
         convertView.setTag(scoreHolder);
         return convertView;
 

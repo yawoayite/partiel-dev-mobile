@@ -1,21 +1,18 @@
-package edu.glsia.jeupartiel;
+package edu.glsia.clickme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import edu.glsia.jeupartiel.database.DBHelper;
-import edu.glsia.jeupartiel.model.Score;
-import edu.glsia.jeupartiel.repository.ScoreRepository;
+import edu.glsia.clickme.database.DBHelper;
+import edu.glsia.clickme.model.Score;
+import edu.glsia.clickme.repository.ScoreRepository;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -49,6 +46,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         initOnClick();
+
     }
 
     public void initButtons(){
@@ -61,6 +59,7 @@ public class GameActivity extends AppCompatActivity {
         buttonSept = findViewById(R.id.buttonSept);
         buttonHuit = findViewById(R.id.buttonHuit);
         buttonNeuf = findViewById(R.id.buttonNeuf);
+
         scoreEditText = findViewById(R.id.scoreEditText);
     }
 
@@ -118,7 +117,7 @@ public class GameActivity extends AppCompatActivity {
 
             ScoreRepository scoreRepository = new ScoreRepository();
             scoreRepository.save(dbHelper.getDatabase(),scoreObject);
-
+            finish();
         }
     }
 

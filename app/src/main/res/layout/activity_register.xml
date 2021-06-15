@@ -35,9 +35,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="119dp"
+        android:layout_height="80dp"
         android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="244dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="Prénom" />
 
+        <EditText
+            android:id="@+id/prenomEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="76dp"></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="244dp"
@@ -52,13 +71,27 @@
             android:ems="10"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="76dp"></EditText>
+
     </LinearLayout>
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
         android:orientation="horizontal">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="244dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="Sexe" />
+        <RadioButton android:id="@+id/radioButtonMasculin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculin" />
+        <RadioButton android:id="@+id/radioButtonFeminin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Féminin"
+            />
     </LinearLayout>
 
     <Button

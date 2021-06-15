@@ -1,25 +1,34 @@
-package edu.glsia.jeupartiel;
+package edu.glsia.clickme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.glsia.jeupartiel.adapter.ScoreAdapter;
-import edu.glsia.jeupartiel.database.DBHelper;
-import edu.glsia.jeupartiel.model.Score;
-import edu.glsia.jeupartiel.repository.ScoreRepository;
+import edu.glsia.clickme.adapter.ScoreAdapter;
+import edu.glsia.clickme.database.DBHelper;
+import edu.glsia.clickme.model.Score;
+import edu.glsia.clickme.repository.ScoreRepository;
 
 public class ScoreActivity extends AppCompatActivity {
     private DBHelper dbHelper;
+
+    private Button buttonRechercher;
+    private EditText rechercherEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        buttonRechercher = findViewById(R.id.buttonRechercher);
+        rechercherEditText = findViewById(R.id.rechercherEditText);
 
         dbHelper =  new DBHelper(this);
         ScoreRepository scoreRepository = new ScoreRepository();
@@ -32,5 +41,16 @@ public class ScoreActivity extends AppCompatActivity {
         listView.setAdapter(scoreAdapter);
         scoreAdapter.notifyDataSetChanged();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        buttonRechercher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textRecherche = rechercherEditText.getText().toString();
+            }
+        });
     }
 }

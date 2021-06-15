@@ -1,4 +1,4 @@
-package edu.glsia.jeupartiel;
+package edu.glsia.clickme;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,12 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonAccueil;

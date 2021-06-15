@@ -13,7 +13,7 @@
             android:id="@+id/textscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.1"
             android:gravity="center"
             android:padding="20dp" />
 
@@ -21,8 +21,15 @@
             android:id="@+id/textdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.4"
             android:gravity="center"
             android:padding="20dp" />
+
+        <ImageView
+            android:id="@+id/imageScore"
+            android:layout_width="5dp"
+            android:layout_height="59dp"
+            android:layout_weight="0.5"
+            android:padding="20dp"></ImageView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
